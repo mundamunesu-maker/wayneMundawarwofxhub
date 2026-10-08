@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wayne Mundawarwofxhub | Digital Brand Studio</title>
+  <meta name="description" content="Wayne Mundawarwofxhub - digital brand studio crafting premium digital experiences, strategy, and identity for ambitious brands." />
+  <style>
+    :root {
+      --bg: #07111c;
+      --panel: #0d1a2b;
+      --card: #122338;
+      --text: #edf6ff;
+      --muted: #a4b8ce;
+      --primary: #7dd3fc;
+      --secondary: #8b5cf6;
+      --accent: #34d399;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 20px 50px rgba(11, 18, 32, 0.55);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(125, 211, 252, 0.12), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.14), transparent 25%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1180px, 90%); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(7, 17, 28, 0.78);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .brand span { color: var(--primary); }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      padding: 90px 0 60px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      margin-bottom: 18px;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtext {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 26px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #060f1b;
+      box-shadow: var(--shadow);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.02);
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      min-width: 150px;
+      padding: 16px 18px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .showcase {
+      background: linear-gradient(180deg, rgba(18,35,56,0.92), rgba(10,19,32,0.9));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .mock-window {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #0a1525;
+    }
+
+    .window-header {
+      display: flex;
+      gap: 10px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot.red { background: #f87171; }
+    .dot.yellow { background: #fbbf24; }
+    .dot.green { background: #34d399; }
+
+    .window-body {
+      padding: 24px;
+      min-height: 360px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .bar, .card-mini {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+    }
+    .bar {
+      height: 14px;
+      width: 100%;
+    }
+    .bar:nth-child(1) { width: 72%; }
+    .bar:nth-child(2) { width: 86%; }
+    .bar:nth-child(3) { width: 64%; }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .card-mini {
+      padding: 18px;
+      min-height: 110px;
+    }
+    .card-mini strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    section { padding: 44px 0; }
+
+    .section-head {
+      margin-bottom: 24px;
+    }
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+    .section-head p {
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      transition: 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(125, 211, 252, 0.4);
+    }
+    .card h3 {
+      margin: 14px 0 10px;
+      font-size: 1.25rem;
+    }
+    .card p, .card li { color: var(--muted); }
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(125,211,252,0.12), rgba(139,92,246,0.12));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: var(--primary);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .tag {
+      background: rgba(125,211,252,0.08);
+      border: 1px solid rgba(125,211,252,0.2);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+    }
+    .project-meta {
+      color: var(--primary);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+      color: var(--muted);
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.02);
+      color: var(--text);
+      padding: 14px 16px;
+      font: inherit;
+    }
+    input::placeholder, textarea::placeholder { color: var(--muted); }
+    textarea { min-height: 150px; resize: vertical; }
+
+    footer {
+      padding: 28px 0 60px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-inner, .grid-3, .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+      .nav-links { display: none; }
+      .hero { padding-top: 60px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="brand"><span>Wayne</span> Mundawarwofxhub</a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow">Creative digital systems</div>
+          <h1>Build a <span class="gradient">powerful digital presence</span> that wins attention.</h1>
+          <p class="subtext">
+            Wayne Mundawarwofxhub helps businesses and founders turn ideas into bold brands, conversion-focused websites, and digital experiences that feel premium from the first click.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">Book a discovery call</a>
+            <a class="btn btn-secondary" href="#work">View recent work</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>5+</strong>Years shaping brands</div>
+            <div class="stat"><strong>24</strong>Launches delivered</div>
+            <div class="stat"><strong>100%</strong>Custom strategy</div>
+          </div>
+        </div>
+
+        <div class="showcase">
+          <div class="mock-window">
+            <div class="window-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="window-body">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="mini-grid">
+                <div class="card-mini">
+                  <strong>Brand Identity</strong>
+                  <p>Clear positioning and visual direction.</p>
+                </div>
+                <div class="card-mini">
+                  <strong>Web Design</strong>
+                  <p>High-converting digital experiences.</p>
+                </div>
+                <div class="card-mini">
+                  <strong>Strategy</strong>
+                  <p>Audience-first planning and growth focus.</p>
+                </div>
+                <div class="card-mini">
+                  <strong>Launch</strong>
+                  <p>Momentum-driven execution and support.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>What we do</h2>
+          <p>We create the strategic foundation and polished execution needed for digital brands to stand out and scale with confidence.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Brand Strategy</h3>
+            <p>Positioning, messaging, tone, and visual direction that gives your business an unmistakable voice.</p>
+            <div class="tag-list">
+              <span class="tag">Positioning</span>
+              <span class="tag">Messaging</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Web Design</h3>
+            <p>Beautiful, high-converting website design built to turn visitors into leads, customers, and advocates.</p>
+            <div class="tag-list">
+              <span class="tag">UX/UI</span>
+              <span class="tag">Landing Pages</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Digital Growth</h3>
+            <p>Creative systems and digital assets designed to help your brand stay visible, memorable, and relevant.</p>
+            <div class="tag-list">
+              <span class="tag">Content</span>
+              <span class="tag">Campaigns</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured projects</h2>
+          <p>Recent work designed to clarify positioning, elevate credibility, and improve digital performance.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card project-card">
+            <div>
+              <div class="project-meta">Brand Refresh</div>
+              <h3>Modern Business Identity</h3>
+              <p>Created a premium visual system and messaging direction for a growing business preparing to scale.</p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Branding</span>
+              <span class="tag">Strategy</span>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div>
+              <div class="project-meta">Website Launch</div>
+              <h3>Conversion-focused Landing Page</h3>
+              <p>Developed a clean, high-converting landing page built around clarity, trust, and a stronger user journey.</p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Web</span>
+              <span class="tag">UX</span>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div>
+              <div class="project-meta">Digital Presence</div>
+              <h3>Premium Online Experience</h3>
+              <p>Designed and structured a digital presence that turned a founder’s vision into a scalable brand story.</p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Design</span>
+              <span class="tag">Launch</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About Wayne</h2>
+          <p>Wayne Mundawarwofxhub brings together creative thinking, strategic clarity, and digital execution to help brands grow with purpose.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Creative first</h3>
+            <p>Every concept is built to be memorable, premium, and aligned with the people you want to attract.</p>
+          </article>
+          <article class="card">
+            <h3>Business focused</h3>
+            <p>Design decisions are rooted in conversion, trust, and sustainable growth—not just aesthetics.</p>
+          </article>
+          <article class="card">
+            <h3>Execution-ready</h3>
+            <p>From idea to launch, the process is practical, collaborative, and designed to move your brand forward.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Let’s build your next move</h2>
+          <p>Ready to sharpen your brand and create a stronger digital presence? Let’s talk.</p>
+        </div>
+
+        <div class="contact-wrap">
+          <div>
+            <p>We partner with founders, creators, and businesses who want a cleaner brand story and a more confident digital presence.</p>
+
+            <ul class="contact-list">
+              <li>Email: hello@waynemundawarwofxhub.com</li>
+              <li>Phone: +1 (555) 204-9281</li>
+              <li>Location: Remote / Global</li>
+              <li>Instagram: @waynemundawarwofxhub</li>
+            </ul>
+          </div>
+
+          <form>
+            <input type="text" placeholder="Your name" />
+            <input type="email" placeholder="Your email" />
+            <textarea placeholder="Tell us about your project"></textarea>
+            <button class="btn btn-primary" type="submit">Send inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Wayne Mundawarwofxhub. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
